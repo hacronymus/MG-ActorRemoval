@@ -12,6 +12,8 @@
 
 param($actorList,$videoFolder,$archiveFolder)
 
+$DebugPreference = "Continue"
+
 if(!$actorList) {$actorList = "D:\d3 projects\meangirls_BWAY\objects\table\Actors.txt"}
 if(!$videoFolder) {$videoFolder = "D:\d3 projects\meangirls_BWAY\objects\videofile"}
 if(!$archiveFolder) {$archiveFolder = "D:\d3 projects\meangirls_BWAY\archive"}
