@@ -61,6 +61,14 @@ if($proceed -eq "Y") {
 		Move-Item $videoFolder"\"$file -Destination $archiveFolder
 	}
 
+	Write-Host "Archiving actors.txt..."
+
+	Copy-Item $actorList -Destination $archiveFolder
+
+	Write-Host "Removing $chosenActor from actors.txt..."
+
+	(type $actorList) -notmatch $chosenActor | Out-File $actorList -Force
+
 	Write-Host("Complete!") -ForegroundColor Green
 	
 
@@ -70,8 +78,6 @@ else {
 	Write-Host("Aborting.")-ForegroundColor Red
 }
 
-#Get-Content -Path $actorList | Where ($_ -ne $chosenActor) | Out-File "actors.txt" -Force
-#$actorList -notmatch $chosenActor | Out-File "actors.txt" -Force
 
 
 Read-Host -Prompt "Press Any Key to Exit"
