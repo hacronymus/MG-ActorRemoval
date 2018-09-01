@@ -1,10 +1,14 @@
 ﻿#
-# Script.ps1
+# MG-ActorRemoval.ps1
+#
+# Version 1.1
 #
 # Reads in Actor.txt list
 # User selects Actor from list
 # Searches through videoFile folder for all instances of files that match Actor
 # Asks user to confirm move of files to Archive folder
+# Archives actors.txt
+# Removes actor from actors.txt
 
 param($actorList,$videoFolder,$archiveFolder)
 
