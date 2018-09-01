@@ -328,3 +328,4 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/MG-ActorRemoval/MG-ActorRemoval/actors.txt
