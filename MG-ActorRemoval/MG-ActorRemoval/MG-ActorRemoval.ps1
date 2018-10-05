@@ -71,11 +71,11 @@ if($proceed -eq "Y") {
 
 	Copy-Item $actorList -Destination $archiveFolder
 
-	Write-Host "Removing $chosenActor from actors.txt..."
+	#Write-Host "Removing $chosenActor from actors.txt..."
 
-	(type $actorList) -notmatch $chosenActor | Out-File $actorList -Force
+	#(type $actorList) -notmatch $chosenActor | Out-File $actorList -Force
 
-	Write-Host("Complete!") -ForegroundColor Green
+	#Write-Host("Complete!") -ForegroundColor Green
 	
 
 }
